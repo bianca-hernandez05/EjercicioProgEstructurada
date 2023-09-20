@@ -4,6 +4,7 @@ public class Ejercicio21 {
 
     public static void main(String[] args) {
         Scanner lector = new Scanner(System.in);
+        byte intentos = 1 , intentoMaximo = 2;
 
         int año;
 
@@ -16,8 +17,23 @@ public class Ejercicio21 {
             System.out.println("Año fuera del rango establecido : ");
         }
 
+        if(intentos <3){
+
+            System.out.println("Intentelo nuevamente : ");
+            System.out.println("Le quedan : " + (intentoMaximo - intentos) + " Intentos");
+        }
+
+      intentos++;
+      
+      if(intentos == intentoMaximo){
+        
+      System.out.println("No le quedan mas intentos ");
+      }
+
         lector.close();
     }
+
+    
 
     public static void generarCalendario(int año) {
         for (int mes = 1; mes <= 12; mes++) {

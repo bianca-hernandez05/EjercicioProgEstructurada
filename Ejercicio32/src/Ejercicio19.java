@@ -5,6 +5,7 @@ public class Ejercicio19 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         double totalRecibosAyer = 0;
+        byte intentos =1 , intentoMaximo=3;
 
         System.out.println("Ingrese las horas de estacionamiento para cada cliente (ingrese -1 si desea salir ): ");
 
@@ -18,6 +19,18 @@ public class Ejercicio19 {
 
             double cargo = calcularCargo(horasEstacionadas);
             totalRecibosAyer += cargo;
+
+            if(intentos <3){
+
+                System.out.println("Intentelo nuevamente : ");
+                System.out.println("Le quedan : " + (intentoMaximo - intentos) + " Intentos");
+            }
+          intentos++;
+          
+          if(intentos == intentoMaximo){
+            
+          System.out.println("No le quedan mas intentos ");
+          }
 
             System.out.printf("Cargo para usted : C$%.2f%n", cargo);
         }

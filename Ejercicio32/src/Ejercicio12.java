@@ -7,7 +7,7 @@ public class Ejercicio12 {
 
         System.out.print("¿Que tipo de cliente es (R) Residencial o de (N)Negocios? ");
         char tipodeCliente = lector.next().charAt(0);
-
+        byte intentoMaximo = 3 , intentos = 0;
         double cargoporProcesamiento = 0.0;
         double cargoservicioBasico = 0.0;
         double costoCanalesPremium = 0.0;
@@ -37,6 +37,18 @@ public class Ejercicio12 {
         }
 
         double totalFactura = cargoporProcesamiento + cargoservicioBasico + costoCanalesPremium;
+
+        if(intentos <3){
+
+            System.out.println("Intentelo nuevamente : ");
+            System.out.println("Le quedan : " + (intentoMaximo - intentos) + " Intentos");
+      }
+      intentos++;
+      
+      if(intentos == intentoMaximo){
+        
+      System.out.println("No le quedan mas intentos ");
+      }
 
         System.out.println(" Cargo total por procesamiento de la factura: C$" + cargoporProcesamiento);
         System.out.println(" Cargo total por servicio básico: C$" + cargoservicioBasico);

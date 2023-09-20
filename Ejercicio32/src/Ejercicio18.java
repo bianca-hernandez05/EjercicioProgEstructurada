@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class Ejercicio18 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        byte intentos=1, intentoMaximo=3;
 
         System.out.println("Seleccione una figura geométrica:");
         System.out.println("1. Triángulo rectángulo");
@@ -19,35 +20,136 @@ public class Ejercicio18 {
         int opcion = scanner.nextInt();
 
         switch (opcion) {
+
             case 1:
                 dibujarTrianguloRectangulo();
+                if(intentos <3){
+
+                    System.out.println("Intentelo nuevamente : ");
+                    System.out.println("Le quedan : " + (intentoMaximo - intentos) + " Intentos");
+              }
+              intentos++;
+              if(intentos == intentoMaximo){
+                
+              System.out.println("No le quedan mas intentos ");
+              }
                 break;
             case 2:
                 dibujarTrianguloEquilatero();
+                if(intentos <3){
+
+                    System.out.println("Intentelo nuevamente : ");
+                    System.out.println("Le quedan : " + (intentoMaximo - intentos) + " Intentos");
+              }
+              intentos++;
+              if(intentos == intentoMaximo){
+                
+              System.out.println("No le quedan mas intentos ");
+              }
                 break;
             case 3:
                 dibujarCuadrado();
+                if(intentos <3){
+
+                    System.out.println("Intentelo nuevamente : ");
+                    System.out.println("Le quedan : " + (intentoMaximo - intentos) + " Intentos");
+              }
+              intentos++;
+              if(intentos == intentoMaximo){
+                
+              System.out.println("No le quedan mas intentos ");
+              }
                 break;
             case 4:
                 dibujarRectangulo();
+                if(intentos <3){
+
+                    System.out.println("Intentelo nuevamente : ");
+                    System.out.println("Le quedan : " + (intentoMaximo - intentos) + " Intentos");
+              }
+              intentos++;
+              if(intentos == intentoMaximo){
+                
+              System.out.println("No le quedan mas intentos ");
+              }
                 break;
             case 5:
                 dibujarParalelogramo();
+                if(intentos <3){
+
+                    System.out.println("Intentelo nuevamente : ");
+                    System.out.println("Le quedan : " + (intentoMaximo - intentos) + " Intentos");
+              }
+              intentos++;
+              if(intentos == intentoMaximo){
+                
+              System.out.println("No le quedan mas intentos ");
+              }
                 break;
             case 6:
                 dibujarRombo();
+                if(intentos <3){
+
+                    System.out.println("Intentelo nuevamente : ");
+                    System.out.println("Le quedan : " + (intentoMaximo - intentos) + " Intentos");
+              }
+              intentos++;
+              if(intentos == intentoMaximo){
+                
+              System.out.println("No le quedan mas intentos ");
+              }
                 break;
             case 7:
                 dibujarCirculo();
+                if(intentos <3){
+
+                    System.out.println("Intentelo nuevamente : ");
+                    System.out.println("Le quedan : " + (intentoMaximo - intentos) + " Intentos");
+              }
+              intentos++;
+              if(intentos == intentoMaximo){
+                
+              System.out.println("No le quedan mas intentos ");
+              }
                 break;
             case 8:
                 dibujarTrapecio();
+                if(intentos <3){
+
+                    System.out.println("Intentelo nuevamente : ");
+                    System.out.println("Le quedan : " + (intentoMaximo - intentos) + " Intentos");
+              }
+              intentos++;
+              if(intentos == intentoMaximo){
+                
+              System.out.println("No le quedan mas intentos ");
+              }
                 break;
             case 9:
                 dibujarPentagono();
+                if(intentos <3){
+
+                    System.out.println("Intentelo nuevamente : ");
+                    System.out.println("Le quedan : " + (intentoMaximo - intentos) + " Intentos");
+              }
+              intentos++;
+              if(intentos == intentoMaximo){
+                
+              System.out.println("No le quedan mas intentos ");
+              }
                 break;
             case 10:
                 dibujarElipse();
+                if(intentos <3){
+
+                    System.out.println("Intentelo nuevamente : ");
+                    System.out.println("Le quedan : " + (intentoMaximo - intentos) + " Intentos");
+              }
+              intentos++;
+              if(intentos == intentoMaximo){
+                
+              System.out.println("No le quedan mas intentos ");
+              }
                 break;
             default:
                 System.out.println("Opción no válida");

@@ -5,6 +5,7 @@ public class Ejercicio28 {
     public static void main(String[] args) {
        Scanner lector = new Scanner (System.in);
        Random rd = new Random ();
+       byte intentoMaximo = 3, intentos = 1;
      
    int numero1,numero2,numero3, numeroazar;
 
@@ -20,6 +21,17 @@ public class Ejercicio28 {
    deduccion = lector.nextInt();
 
    if (deduccion < 0 || deduccion > 999) {
+    if(intentos <3){
+
+      System.out.println("Intentelo nuevamente : ");
+      System.out.println("Le quedan : " + (intentoMaximo - intentos) + " Intentos");
+}
+intentos++;
+if(intentos == intentoMaximo){
+  
+System.out.println("No le quedan mas intentos ");
+}
+  }else{
      System.out.println("El numero que ingreso no es valido");
      return;
    }

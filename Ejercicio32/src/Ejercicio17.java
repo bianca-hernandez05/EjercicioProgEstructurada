@@ -6,6 +6,7 @@ public class Ejercicio17 {
         Scanner scanner = new Scanner(System.in);
 
         double[] valorArticulo = { 239.99, 129.75, 99.95, 350.89 };
+        byte intentoMaximo = 3, intentos = 1; 
 
         System.out.println("Ingrese los artículos vendidos por el vendedor (1 al 4) y sus cantidades:");
         double totalVenta = 0;
@@ -37,7 +38,18 @@ public class Ejercicio17 {
         double salarioBase = 200.0;
         double comision = 0.09 * totalVenta;
         double ingresoTotal = salarioBase + comision;
+        
+        if(intentos <3){
 
+            System.out.println("Intentelo nuevamente : ");
+            System.out.println("Le quedan : " + (intentoMaximo - intentos) + " Intentos");
+        }
+      intentos++;
+      
+      if(intentos == intentoMaximo){
+        
+      System.out.println("No le quedan mas intentos ");
+      }
         System.out.printf("Ingresos del vendedor: C$%.2f%n", ingresoTotal);
 
         scanner.close();

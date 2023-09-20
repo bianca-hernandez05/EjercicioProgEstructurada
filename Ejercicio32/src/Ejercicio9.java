@@ -5,6 +5,7 @@ public class Ejercicio9 {
         Scanner lector = new Scanner(System.in);
         
         int c, d, suma_numeros_pares, suma_Cuadrados_Impares, cuadrado;
+        byte intentos = 1 , intentoMaximo = 3;
 
         System.out.print("Ingrese el primer número: ");
         c = lector.nextInt();
@@ -40,7 +41,17 @@ public class Ejercicio9 {
             c= c + 1 ;
 
         }
+        if(intentos <3){
 
+            System.out.println("Intentelo nuevamente : ");
+            System.out.println("Le quedan : " + (intentoMaximo - intentos) + " Intentos");
+        }
+
+      intentos++;
+      if(intentos == intentoMaximo){
+        
+      System.out.println("No le quedan mas intentos ");
+      }
         System.out.println("Suma de números pares: " + suma_numeros_pares);
         System.out.println("Suma de cuadrados de números impares: " + suma_Cuadrados_Impares);
 

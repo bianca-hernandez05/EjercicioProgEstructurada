@@ -1,9 +1,9 @@
 import java.util.Scanner;
 public class Ejercicio16 {
     public static void main(String[] args) {
-
-          int numeroDeCuenta, valorInicial, cargoTotal, creditoTotal,limitedeCredito,nuevoBalance;
-          Scanner lector = new Scanner(System.in);
+    Scanner lector = new Scanner(System.in);
+        int numeroDeCuenta, valorInicial, cargoTotal, creditoTotal,limitedeCredito,nuevoBalance;
+         byte intentos =1 ,intentoMaximo = 3;        
         
           System.out.println(" número de cuenta del cliente:");
           numeroDeCuenta = lector.nextInt();
@@ -21,7 +21,19 @@ public class Ejercicio16 {
           limitedeCredito = lector.nextInt();
       
           nuevoBalance = valorInicial + cargoTotal - creditoTotal;
-     
+
+          if(intentos <3){
+
+            System.out.println("Intentelo nuevamente : ");
+            System.out.println("Le quedan : " + (intentoMaximo - intentos) + " Intentos");
+      }
+      intentos++;
+      
+      if(intentos == intentoMaximo){
+        
+      System.out.println("No le quedan mas intentos ");
+      }
+
           System.out.println("El saldo actual de cliente es de : " + nuevoBalance);
            System.out.println("El estado o numero de cuenta del cliente es de : " + numeroDeCuenta);
         

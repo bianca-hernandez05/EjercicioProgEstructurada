@@ -6,6 +6,7 @@ public static void main(String[] args) {
    Scanner lector = new Scanner (System.in);
 
     int c,d;
+    byte intentoMaximo = 3, intentos = 1;
 
     System.out.println ("Ingrese un numero entero menor: ");
       c = lector.nextInt();
@@ -14,6 +15,17 @@ public static void main(String[] args) {
       d = lector.nextInt();
 
       if (c < d) {
+        if(intentos <3){
+
+          System.out.println("Intentelo nuevamente : ");
+          System.out.println("Le quedan : " + (intentoMaximo - intentos) + " Intentos");
+    }
+    intentos++;
+    if(intentos == intentoMaximo){
+      
+    System.out.println("No le quedan mas intentos ");
+    }
+} else{
         System.out.println ("El valor de C debe de ser menor que al valor de D : ");
       } 
    
@@ -54,6 +66,16 @@ public static void main(String[] args) {
         System.out.println(num + " es un numero primo");
       }
     }
+    if(intentos <3){
+
+      System.out.println("Intentelo nuevamente : ");
+      System.out.println("Le quedan : " + (intentoMaximo - intentos) + " Intentos");
+}
+intentos++;
+if(intentos == intentoMaximo){
+  
+System.out.println("No le quedan mas intentos ");
+}
 
     System.out.println("La suma de los números pares  son " + c + " + " + d + " = " + Suma_par);
     System.out.println("La suma de los cuadrados de los números impares son " + c + " + " + d + " = " + Suma_cuadra_impar);

@@ -7,6 +7,7 @@ public class Ejercicio29 {
        
     int lugar = 0;
     int horaenCasa = 0;
+    byte intentoMaximo = 3, intentos = 1;
 
    String mascota = "";
 
@@ -16,6 +17,17 @@ public class Ejercicio29 {
    
     if (lugar < 1 || lugar > 3) {
       System.out.println("Opción inválida");
+      if(intentos <3){
+
+        System.out.println("Intentelo nuevamente : ");
+        System.out.println("Le quedan : " + (intentoMaximo - intentos) + " Intentos");
+  }
+  intentos++;
+  if(intentos == intentoMaximo){
+    
+  System.out.println("No le quedan mas intentos ");
+  }
+}else{
       return;
     }
 
@@ -29,11 +41,23 @@ public class Ejercicio29 {
     horaenCasa = lector.nextInt();
     if (horaenCasa < 1 || horaenCasa > 5) {
       System.out.println("Opción No valida");
+      if(intentos <3){
+
+        System.out.println("Intentelo nuevamente : ");
+        System.out.println("Le quedan : " + (intentoMaximo - intentos) + " Intentos");
+  }
+  intentos++;
+  if(intentos == intentoMaximo){
+    
+  System.out.println("No le quedan mas intentos ");
+  }
+   
+}else{
       return;
     }
 
     switch (lugar) {
-      case 1: // el que puede puede (apartamento)
+      case 1: // (apartamento)
         switch (horaenCasa) {
           case 1: // 10-17 horas en casa
             mascota = "Gato"; // miau miau

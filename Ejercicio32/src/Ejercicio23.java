@@ -6,6 +6,7 @@ public class Ejercicio23 {
         Scanner scanner = new Scanner(System.in);
 
         int dimension;
+        byte intentoMaximo=3, intentos=1;
 
         do {
             System.out.println("Seleccione la dimensión de los vectores a calcular:");
@@ -38,36 +39,117 @@ public class Ejercicio23 {
                     case 1:
                         double[] suma = sumaVectores(vector1, vector2);
                         imprimirVector(suma);
+
+                        if(intentos <3){
+
+                            System.out.println("Intentelo nuevamente : ");
+                            System.out.println("Le quedan : " + (intentoMaximo - intentos) + " Intentos");
+                      }
+                      intentos++;
+                      if(intentos == intentoMaximo){
+                        
+                      System.out.println("No le quedan mas intentos ");
+                      }
                         break;
                     case 2:
                         double[] resta = restaVectores(vector1, vector2);
                         imprimirVector(resta);
+                          if(intentos <3){
+
+                            System.out.println("Intentelo nuevamente : ");
+                            System.out.println("Le quedan : " + (intentoMaximo - intentos) + " Intentos");
+                      }
+                      intentos++;
+                      if(intentos == intentoMaximo){
+                        
+                      System.out.println("No le quedan mas intentos ");
+                      }
                         break;
                     case 3:
                         double[] opuesto = opuestoVector(vector1);
                         imprimirVector(opuesto);
+                          if(intentos <3){
+
+                            System.out.println("Intentelo nuevamente : ");
+                            System.out.println("Le quedan : " + (intentoMaximo - intentos) + " Intentos");
+                      }
+                      intentos++;
+                      if(intentos == intentoMaximo){
+                        
+                      System.out.println("No le quedan mas intentos ");
+                      }
                         break;
                     case 4:
                         System.out.print("Ingrese el escalar: ");
                         double escalar = scanner.nextDouble();
                         double[] productoEscalar = productoEscalar(vector1, escalar);
                         imprimirVector(productoEscalar);
+                          if(intentos <3){
+
+                            System.out.println("Intentelo nuevamente : ");
+                            System.out.println("Le quedan : " + (intentoMaximo - intentos) + " Intentos");
+                      }
+                      intentos++;
+                      if(intentos == intentoMaximo){
+                        
+                      System.out.println("No le quedan mas intentos ");
+                      }
                         break;
                     case 5:
                         double productoPunto = productoPunto(vector1, vector2);
                         System.out.println("Producto Punto: " + productoPunto);
+                          if(intentos <3){
+
+                            System.out.println("Intentelo nuevamente : ");
+                            System.out.println("Le quedan : " + (intentoMaximo - intentos) + " Intentos");
+                      }
+                      intentos++;
+                      if(intentos == intentoMaximo){
+                        
+                      System.out.println("No le quedan mas intentos ");
+                      }
                         break;
                     case 6:
                         boolean sonParalelos = sonVectoresParalelos(vector1, vector2);
                         System.out.println("Son vectores paralelos: " + sonParalelos);
+                          if(intentos <3){
+
+                            System.out.println("Intentelo nuevamente : ");
+                            System.out.println("Le quedan : " + (intentoMaximo - intentos) + " Intentos");
+                      }
+                      intentos++;
+                      if(intentos == intentoMaximo){
+                        
+                      System.out.println("No le quedan mas intentos ");
+                      }
                         break;
                     case 7:
                         boolean sonOrtogonales = sonVectoresOrtogonales(vector1, vector2);
                         System.out.println("Son vectores ortogonales: " + sonOrtogonales);
+                          if(intentos <3){
+
+                            System.out.println("Intentelo nuevamente : ");
+                            System.out.println("Le quedan : " + (intentoMaximo - intentos) + " Intentos");
+                      }
+                      intentos++;
+                      if(intentos == intentoMaximo){
+                        
+                      System.out.println("No le quedan mas intentos ");
+                      }
                         break;
                     case 8:
                         double[] proyeccion = proyeccionVector(vector1, vector2);
                         imprimirVector(proyeccion);
+                          if(intentos <3){
+
+                            System.out.println("Intentelo nuevamente : ");
+                            System.out.println("Le quedan : " + (intentoMaximo - intentos) + " Intentos");
+                      }
+                      intentos++;
+                      if(intentos == intentoMaximo){
+                        
+                      System.out.println("No le quedan mas intentos ");
+                      }
                         break;
                     case 9:
                         if (dimension == 3) {
@@ -76,6 +158,16 @@ public class Ejercicio23 {
                         } else {
                             System.out.println("El producto cruz solo se puede calcular en 3D.");
                         }
+                          if(intentos <3){
+
+                            System.out.println("Intentelo nuevamente : ");
+                            System.out.println("Le quedan : " + (intentoMaximo - intentos) + " Intentos");
+                      }
+                      intentos++;
+                      if(intentos == intentoMaximo){
+                        
+                      System.out.println("No le quedan mas intentos ");
+                      }
                         break;
                     default:
                         System.out.println("Operación no válida.");

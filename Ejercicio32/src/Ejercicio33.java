@@ -4,6 +4,7 @@ public class Ejercicio33 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        byte intentoMaximo = 3, intentos = 1;
 
         System.out.println("Seleccione el sistema numerico original :");
         System.out.println("1. Binario");
@@ -29,15 +30,59 @@ public class Ejercicio33 {
         switch (sistemaOrigen) {
             case 1:
                 resultado = binarioA(sistemaDestino, numero);
+                if(intentos <3){
+
+                    System.out.println("Intentelo nuevamente : ");
+                    System.out.println("Le quedan : " + (intentoMaximo - intentos) + " Intentos");
+              }
+              intentos++;
+              if(intentos == intentoMaximo){
+                
+              System.out.println("No le quedan mas intentos ");
+              }
+    
                 break;
             case 2:
                 resultado = octalA(sistemaDestino, numero);
+                if(intentos <3){
+
+                    System.out.println("Intentelo nuevamente : ");
+                    System.out.println("Le quedan : " + (intentoMaximo - intentos) + " Intentos");
+              }
+              intentos++;
+              if(intentos == intentoMaximo){
+                
+              System.out.println("No le quedan mas intentos ");
+              }
+    
                 break;
             case 3:
                 resultado = decimalA(sistemaDestino, numero);
+                if(intentos <3){
+
+                    System.out.println("Intentelo nuevamente : ");
+                    System.out.println("Le quedan : " + (intentoMaximo - intentos) + " Intentos");
+              }
+              intentos++;
+              if(intentos == intentoMaximo){
+                
+              System.out.println("No le quedan mas intentos ");
+              }
+    
                 break;
             case 4:
                 resultado = hexadecimalA(sistemaDestino, numero);
+                if(intentos <3){
+
+                    System.out.println("Intentelo nuevamente : ");
+                    System.out.println("Le quedan : " + (intentoMaximo - intentos) + " Intentos");
+              }
+              intentos++;
+              if(intentos == intentoMaximo){
+                
+              System.out.println("No le quedan mas intentos ");
+              }
+    
                 break;
             default:
                 System.out.println("Sistema numérico de origen no válido.");

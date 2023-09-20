@@ -9,6 +9,7 @@ public class Ejercicio8 {
         String colorMarco;
         double costoCarton = 0;
         double costoVidrio = 0;
+        byte intentos =1 ,intentoMaximo = 3;
 
         System.out.print("ingrese la longitud de la fotografía en pulgadas: ");
         longitud = lector.nextDouble();
@@ -62,6 +63,17 @@ public class Ejercicio8 {
 
                 costoTotal = costoMarco + costoPintura + costoCarton + costoVidrio + costoCoronas;
                 System.out.println("El costo final de enmarcar la fotografía con costo regular es de: U$" + costoTotal);
+                if(intentos <3){
+
+                    System.out.println("Intentelo nuevamente : ");
+                    System.out.println("Le quedan : " + (intentoMaximo - intentos) + " Intentos");
+                }
+        
+              intentos++;
+              if(intentos == intentoMaximo){
+                
+              System.out.println("No le quedan mas intentos ");
+              }
                 break;
 
             case 'L':
@@ -103,12 +115,19 @@ public class Ejercicio8 {
                     costoVidrio = 0.07 * (longitud * ancho);
                 }
                 costoTotal = costoMarco + costoPintura + costoCarton + costoVidrio + costoCoronas;
-
                 System.out.println("El costo final de enmarcar la fotografía con un marco lujoso es de: U$" + costoTotal);
+                if(intentos <3){
 
+                    System.out.println("Intentelo nuevamente : ");
+                    System.out.println("Le quedan : " + (intentoMaximo - intentos) + " Intentos");
+                }
+              intentos++;
+              if(intentos == intentoMaximo){
+              System.out.println("No le quedan mas intentos ");
+              }
                 break;
             default:
-                System.out.println("FIN.");
+                System.out.println("FIN .");
 
                 break;
         }

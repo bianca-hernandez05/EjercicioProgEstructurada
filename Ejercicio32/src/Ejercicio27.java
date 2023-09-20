@@ -7,6 +7,7 @@ public class Ejercicio27 {
 
         double salarioAnual;
         int Antiguedad;
+        byte intentoMaximo = 3, intentos = 1;
 
         System.out.print("Ingrese el salario anual del empleado: U$");
         salarioAnual = scanner.nextDouble();
@@ -19,12 +20,56 @@ public class Ejercicio27 {
 
         if (Antiguedad == 1) {
             porcentajedeAntiguedad = 0.03;
+            if(intentos <3){
+
+                System.out.println("Intentelo nuevamente : ");
+                System.out.println("Le quedan : " + (intentoMaximo - intentos) + " Intentos");
+          }
+          intentos++;
+          if(intentos == intentoMaximo){
+            
+          System.out.println("No le quedan mas intentos ");
+          }
+
         } else if (Antiguedad >= 2 && Antiguedad <= 20) {
             porcentajedeAntiguedad = (Antiguedad * 2 + 1) / 100.0;
+            if(intentos <3){
+
+                System.out.println("Intentelo nuevamente : ");
+                System.out.println("Le quedan : " + (intentoMaximo - intentos) + " Intentos");
+          }
+          intentos++;
+          if(intentos == intentoMaximo){
+            
+          System.out.println("No le quedan mas intentos ");
+          }
+
         } else if (Antiguedad >= 21 && Antiguedad <= 30) {
             porcentajedeAntiguedad = 0.50;
+            if(intentos <3){
+
+                System.out.println("Intentelo nuevamente : ");
+                System.out.println("Le quedan : " + (intentoMaximo - intentos) + " Intentos");
+          }
+          intentos++;
+          if(intentos == intentoMaximo){
+            
+          System.out.println("No le quedan mas intentos ");
+          }
+
         } else if (Antiguedad > 30) {
             porcentajedeAntiguedad = 0.60;
+            if(intentos <3){
+
+                System.out.println("Intentelo nuevamente : ");
+                System.out.println("Le quedan : " + (intentoMaximo - intentos) + " Intentos");
+          }
+          intentos++;
+          if(intentos == intentoMaximo){
+            
+          System.out.println("No le quedan mas intentos ");
+          }
+
         }
 
         double IR = 0.0;

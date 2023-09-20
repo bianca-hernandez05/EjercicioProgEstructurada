@@ -7,15 +7,40 @@ public class Ejercicio25 {
 
         String contra;
         String confirmacion;
+         byte intentoMaximo = 3, intentos = 1;
 
         do {
             System.out.print("Ingrese una contraseña que contenga de 6 a 10 caracteres: ");
             contra = lector.nextLine();
+
+            if(intentos <3){
+
+                System.out.println("Intentelo nuevamente : ");
+                System.out.println("Le quedan : " + (intentoMaximo - intentos) + " Intentos");
+          }
+          intentos++;
+          if(intentos == intentoMaximo){
+            
+          System.out.println("No le quedan mas intentos ");
+          }
+
+
         } while (!validarContra(contra));
 
         do {
             System.out.print("Confirme su contraseña: ");
             confirmacion = lector.nextLine();
+            if(intentos <3){
+
+                System.out.println("Intentelo nuevamente : ");
+                System.out.println("Le quedan : " + (intentoMaximo - intentos) + " Intentos");
+          }
+          intentos++;
+          if(intentos == intentoMaximo){
+            
+          System.out.println("No le quedan mas intentos ");
+          }
+
         } while (!contra.equals(confirmacion));
 
         System.out.println("Bienvenido ha podido ingresar con exito: !");

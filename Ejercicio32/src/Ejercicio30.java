@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class Ejercicio30{
 public static void main(String[] args) {
         Scanner lector = new Scanner(System.in);
+        byte intentoMaximo = 3, intentos = 1;
 
         String[] Categorias = {
                 
@@ -95,6 +96,17 @@ public static void main(String[] args) {
                 System.out.println("Opción inválida. Por favor, intente seleccionar otro numero que sea valido .");
             }
         }
+
+        if(intentos <3){
+
+            System.out.println("Intentelo nuevamente : ");
+            System.out.println("Le quedan : " + (intentoMaximo - intentos) + " Intentos");
+      }
+      intentos++;
+      if(intentos == intentoMaximo){
+        
+      System.out.println("No le quedan mas intentos ");
+      }
 
         System.out.println("\n Detalle de la factura:");
         System.out.println(orden);

@@ -6,6 +6,7 @@ public class Ejercicio10 {
       double A1,A2,A3,A4,A5,b,pesoCorporalkg,pesoCorporalLb, medidaMuneca = 0 ; 
       double medidaCintura,medidaCadera,medidaAntebrazo,grasaCorporalkg = 0,porcentajeGrasaCorporalkg = 0;
       double porcentajeGrasaCorporalLb = 0,grasaCorporalLB = 0;
+      byte intentos = 1, intentoMaximo = 3;
 
       Scanner lector = new Scanner(System.in);
       System.out.println ("En el programa se mostrara resultados sobre masa corporal por favor ingrese cual es su sexo f/m (femenino o masculino)");
@@ -51,13 +52,21 @@ public class Ejercicio10 {
           grasaCorporalLB = grasaCorporalkg * 2.2;
           porcentajeGrasaCorporalLb = porcentajeGrasaCorporalkg * 2.2;
           
-          
+          if(intentos <3){
+
+            System.out.println("Intentelo nuevamente : ");
+            System.out.println("Le quedan : " + (intentoMaximo - intentos) + " Intentos");
+        }
+
+      intentos++;
+      if(intentos == intentoMaximo){
+        
+      System.out.println("No le quedan mas intentos ");
+      }
             System.out.println("Su grasa corporal en KG es " +grasaCorporalkg);
             System.out.println("Su grasa corporal en Lb es " +grasaCorporalLB);
             System.out.println("Su porcetaje de grasa corporal en Kg es " +porcentajeGrasaCorporalkg);
             System.out.println("Su porcentaje de grasa corporal en LB es " +porcentajeGrasaCorporalLb);
-        
-
             break;
 
         case 'm':
@@ -82,7 +91,18 @@ public class Ejercicio10 {
           porcentajeGrasaCorporalkg = (grasaCorporalkg * 100) / pesoCorporalkg;
           grasaCorporalLB = pesoCorporalLb - b;
           porcentajeGrasaCorporalLb = (grasaCorporalLB * 100) / pesoCorporalLb;
-            
+          
+          if(intentos <3){
+
+            System.out.println("Intentelo nuevamente : ");
+            System.out.println("Le quedan : " + (intentoMaximo - intentos) + " Intentos");
+        }
+
+      intentos++;
+      if(intentos == intentoMaximo){
+        
+      System.out.println("No le quedan mas intentos ");
+      }            
             
           System.out.println("Su peso corporal en Kg es " + grasaCorporalkg);
           System.out.println("Su peso corporal en Lb es " +grasaCorporalLB);

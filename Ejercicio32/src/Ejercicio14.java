@@ -6,6 +6,7 @@ public class Ejercicio14 {
 
         int litros = 0, kilometros = 0 ;
         double total;
+        byte intentos = 0 ,intentoMaximo = 3;
 
         do{
         System.out.println("ingrese cantidad de litros de combustible consumidos en el viaje : ");
@@ -19,6 +20,17 @@ public class Ejercicio14 {
 
         total = litros / kilometros * 100;
 
+        if(intentos <3){
+
+            System.out.println("Intentelo nuevamente : ");
+            System.out.println("Le quedan : " + (intentoMaximo - intentos) + " Intentos");
+        }
+    
+      intentos++;
+      if(intentos == intentoMaximo){
+        
+      System.out.println("No le quedan mas intentos ");
+      }
         System.out.println("Los kilometros por litro son " +total);
 
 

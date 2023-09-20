@@ -7,7 +7,7 @@ public class Ejercicio13 {
 
         double saldoCordobas = 0;
         double saldoDolares = 0;
-
+        byte intentoMaximo = 3, intentos = 0;
         boolean continuar = true;
 
         while (continuar) {
@@ -41,9 +41,21 @@ public class Ejercicio13 {
                     System.out.println("Opción no válida. Intentelo de nuevo con un caracter correcto .");
             }
         }
+        if(intentos <3){
+
+            System.out.println("Intentelo nuevamente : ");
+            System.out.println("Le quedan : " + (intentoMaximo - intentos) + " Intentos");
+        }
+      
+      intentos++;
+      
+      if(intentos == intentoMaximo){
+        
+      System.out.println("No le quedan mas intentos ");
 
         System.out.println("Gracias por utilizar el Cajero Automático ATM.");
-        lector.close();
+      }
+      lector.close();        
     }
 
     public static void consultarSaldo(double saldoCordoba, double saldoDolar) {

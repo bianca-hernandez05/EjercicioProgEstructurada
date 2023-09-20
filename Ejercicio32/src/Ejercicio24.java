@@ -7,6 +7,7 @@ public class Ejercicio24 {
         Scanner scanner = new Scanner(System.in);
 
         String Entrada;
+        byte intentoMaximo = 3, intentos = 1;
 
         System.out.print("Digite Tres palabras : ");
         Entrada = scanner.nextLine();
@@ -23,6 +24,17 @@ public class Ejercicio24 {
                 char primeraLetra = palabra.charAt(0);
                 Acronimo.append(Character.toUpperCase(primeraLetra));
             }
+
+            if(intentos <3){
+
+                System.out.println("Intentelo nuevamente : ");
+                System.out.println("Le quedan : " + (intentoMaximo - intentos) + " Intentos");
+          }
+          intentos++;
+          if(intentos == intentoMaximo){
+            
+          System.out.println("No le quedan mas intentos ");
+          }
 
             System.out.println("Su acronimo es : " + Acronimo.toString());
         }

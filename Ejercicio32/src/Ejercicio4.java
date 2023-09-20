@@ -5,6 +5,7 @@ public class Ejercicio4 {
 
              Scanner lector=new Scanner(System.in);
              double raiz1,raiz2,raiz,a,b,c,dis,parteReal,parteImaginaria;
+             byte intentos = 1 ,intentoMaximo = 3;
              
             System.out.print(" ingrese el valor a: ");
              a = lector.nextDouble();
@@ -16,6 +17,18 @@ public class Ejercicio4 {
              c = lector.nextDouble();
     
              dis = Math.pow(b, 2)- 4 * a * c;
+
+             if(intentos <3){
+
+                System.out.println("Intentelo nuevamente : ");
+                System.out.println("Le quedan : " + (intentoMaximo - intentos) + " Intentos");
+            }
+    
+          intentos++;
+          if(intentos == intentoMaximo){
+            
+          System.out.println("No le quedan mas intentos ");
+          }else{
     
             if (dis > 0) {
                  raiz1 = (-b + Math.sqrt(dis)) / (2 * a);
@@ -34,6 +47,7 @@ public class Ejercicio4 {
                 System.out.println(" La Primer Raíz es  = " + parteReal + " + " + parteImaginaria );
                 System.out.println(" La Segunda Raíz  es = " + parteReal + " - " + parteImaginaria );
             }
+        }
          lector.close();
 
         }

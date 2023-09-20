@@ -8,13 +8,14 @@ public class Ejercicio7 {
         int numeroCuenta, minutosDia, minutosGratis, minutosGratisDia, minutosGratisNoche, minutosNoche;
         double costoMinutoDia, costoMinutoNoche, totalFactura,costoPorMinuto;
         char Servicio;
+        byte intentos = 1, intentoMaximo = 3;
         
         System.out.print("Ingrese el número de cuenta: ");
         numeroCuenta = lector.nextInt();
 
         System.out.print("Ingrese el servicio que ocupa (regular o premium) (R / P): ");
          Servicio = lector.next().charAt(0);
-
+         
         System.out.print("Ingrese el número de minutos utilizados durante el día: ");
         minutosDia = lector.nextInt();
 
@@ -39,12 +40,24 @@ public class Ejercicio7 {
 
                 totalFactura = totalFactura + 10;
 
+                if(intentos <3){
+
+                    System.out.println("Intentelo nuevamente : ");
+                    System.out.println("Le quedan : " + (intentoMaximo - intentos) + " Intentos");
+                }
+        
+              intentos++;
+              if(intentos == intentoMaximo){
+                
+              System.out.println("No le quedan mas intentos ");
+              }else{
+
                 System.out.println("su Número de cuenta: " + numeroCuenta);
                 System.out.println(" su Tipo de servicio: Regular");
                 System.out.println("Los minutos que usted utilizo durante el dia es de : " + minutosDia);
                 System.out.println("Los minutos que usted utilizo durante la noche es de : " + minutosNoche);
                 System.out.println("Su Total a pagar es de : " + totalFactura);
-
+              }
                 break;
 
             case 'P':
@@ -71,6 +84,18 @@ public class Ejercicio7 {
                 System.out.println("Los Minutos que usted utilizo durante la noche es de : " + minutosNoche);
                 System.out.println("Su Total a pagar es de: " + totalFactura);
 
+                if(intentos <3){
+
+                    System.out.println("Intentelo nuevamente : ");
+                    System.out.println("Le quedan : " + (intentoMaximo - intentos) + " Intentos");
+                }
+        
+              intentos++;
+              if(intentos == intentoMaximo){
+                
+              System.out.println("No le quedan mas intentos ");
+              }else{
+            }
                 break;
 
             default:

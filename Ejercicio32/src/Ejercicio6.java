@@ -8,6 +8,7 @@ public class Ejercicio6 {
         int numeroCuenta;
         double saldoActual, saldoMinimo, saldoNuevo;
         char tipoCuenta;
+        byte intentos = 1, intentoMaximo = 3 ; 
 
         for (int f = 0; f < 5; f++) {
             System.out.println("ingrese cliente " + (f + 1));
@@ -50,10 +51,23 @@ public class Ejercicio6 {
 
             }
 
+            if(intentos <3){
+
+                System.out.println("Intentelo nuevamente : ");
+                System.out.println("Le quedan : " + (intentoMaximo - intentos) + " Intentos");
+            }
+    
+          intentos++;
+          if(intentos == intentoMaximo){
+            
+          System.out.println("No le quedan mas intentos ");
+          }else{
+
             System.out.print(" su numero de Número de cuenta es: " + numeroCuenta);
             System.out.print("su Tipo de cuenta es: " + tipoCuenta);
             System.out.print("Su Saldo actual es de: U$" + saldoActual);
             System.out.print("Su Saldo nuevo es de : U$" + saldoNuevo);
+          }
         }
         lector.close();
     }
